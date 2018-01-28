@@ -36,7 +36,7 @@ function activate(context) {
         let text = editor.document.getText(ran);
         var fileFound = true;
         var tempFile = config['tempFilePath'];
-        var matlab = config['matlabPath'];
+        var matlab = "\"" + config['matlabPath'] + "\"";
         fs.writeFile(tempFile, '', function (err) {
             if (err) {
                 vscode.window.showInformationMessage('Error writing to temp file');
