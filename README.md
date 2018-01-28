@@ -2,6 +2,9 @@
 
 This extension gives Visual Studio Code the ability to run selected MATLAB code and show the output in a terminal window.
 
+# Demo
+![Image](demos/demo.gif)
+
 # Setup
 1. In settings, find 'matlab-runner.matlabPath' and set it to the location of the matlab executable.
 For example (mac): '/Applications/MATLAB_R2017b/bin/matlab'
