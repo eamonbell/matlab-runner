@@ -13,6 +13,10 @@
     "activationEvents": [
         "onCommand:extension.runSelection"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eamon-bell/matlab-runner"
+    },
     "main": "./extension",
     "contributes": {
         "commands": [
