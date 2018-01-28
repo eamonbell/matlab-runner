@@ -2,7 +2,7 @@
     "name": "matlab-runner",
     "displayName": "Matlab Runner",
     "description": "Run selected MATLAB code",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "eamonbell",
     "engines": {
         "vscode": "^1.19.0"
