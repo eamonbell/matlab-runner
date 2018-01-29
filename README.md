@@ -2,6 +2,11 @@
 
 This extension gives Visual Studio Code the ability to run selected MATLAB code and show the output in a terminal window.
 
+[![Marketplace](https://vsmarketplacebadge.apphb.com/version-short/Gimly81.matlab.svg)](https://marketplace.visualstudio.com/items?itemName=Gimly81.matlab)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/Gimly81.matlab.svg)](https://marketplace.visualstudio.com/items?itemName=Gimly81.matlab)
+[![GitHub issues](https://img.shields.io/github/issues/eamon-bell/matlab-runner.svg)](https://github.com/eamon-bell/matlab-runner/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/Gimly/vscode-matlab.svg)](https://github.com/eamon-bell/matlab-runner/pulls)
+
 # Demo
 ![Image](demos/demo3.gif)
 
