@@ -2,10 +2,13 @@
 
 This extension gives Visual Studio Code the ability to run selected MATLAB code and show the output in a terminal window.
 
-[![Marketplace](https://vsmarketplacebadge.apphb.com/version-short/Gimly81.matlab.svg)](https://marketplace.visualstudio.com/items?itemName=Gimly81.matlab)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs/Gimly81.matlab.svg)](https://marketplace.visualstudio.com/items?itemName=Gimly81.matlab)
+[![Marketplace](https://vsmarketplacebadge.apphb.com/version-short/eamonbell.matlab-runner.svg)](https://vsmarketplacebadge.apphb.com/version-short/eamonbell.matlab-runner.svg)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/eamonbell.matlab-runner.svg)](https://vsmarketplacebadge.apphb.com/installs/eamonbell.matlab-runner.svg)
 [![GitHub issues](https://img.shields.io/github/issues/eamon-bell/matlab-runner.svg)](https://github.com/eamon-bell/matlab-runner/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/Gimly/vscode-matlab.svg)](https://github.com/eamon-bell/matlab-runner/pulls)
+[![GitHub license](https://img.shields.io/github/license/eamon-bell/matlab-runner.svg)](https://github.com/eamon-bell/matlab-runner/blob/master/LICENSE.txt)
+
+Please open an issue for any bugs you find. I hacked this together for my own personal use, but if others see a benefit from using this I am happy to update it as needed.
 
 # Demo
 ![Image](demos/demo3.gif)
