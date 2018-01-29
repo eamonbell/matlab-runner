@@ -25,3 +25,5 @@ While working on a MATLAB file, highlight the code you want to run, open the com
 
 The first time the command is executed it will open a new terminal for matlab which will take a few seconds, but each following execution will be instant.
 
+Selecting 'Matlab: Run File' will run the entire contents of the current file. Make sure you save to see you changes reflected in the output.
+
