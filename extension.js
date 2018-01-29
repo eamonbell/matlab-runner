@@ -21,6 +21,11 @@ function activate(context) {
         //     }
         //     console.log("File created!");
         // });
+        vscode.window.onDidCloseTerminal(function(event) { 
+            if (event.name == 'Matlab') {
+                term = null;
+            }
+        });    
         var config = vscode.workspace.getConfiguration('matlab-runner');
         if (!config.has('matlabPath') || config['matlabPath'] == null) {
             vscode.window.showErrorMessage("Could not find path to the matlab executable in the configuration file.");
