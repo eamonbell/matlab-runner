@@ -33,6 +33,7 @@ function activate(context) {
         }
         var tempFile = config['tempFilePath'];
         var matlab = "\"" + config['matlabPath'] + "\"";
+        var shouldClear = config['clearPastRuns'];
         fs.writeFile(tempFile, '', function (err) {
             if (err) {
                 vscode.window.showInformationMessage('Error writing to temp file: ' + err.message);
@@ -53,7 +54,9 @@ function activate(context) {
             }, 2000);
         } else {
             term.sendText('clear \'' + tempFile + '\'', true);
-            term.sendText('clc', true);
+            if (shouldClear) {
+                term.sendText('clc', true);
+            }
             term.sendText('run \'' + tempFile + '\'', true);
         }
     });

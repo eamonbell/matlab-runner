@@ -23,6 +23,10 @@
             {
                 "command": "extension.runSelection",
                 "title": "Matlab: Run Selection"
+            },
+            {
+                "command": "extension.runFile",
+                "title": "Matlab: Run File"
             }
         ],
         "configuration":[
@@ -39,6 +43,11 @@
 					    "type": "string",
 					    "default": null,
 					    "description": "The path to the temporary matlab file used for execution"
+                    },
+                    "matlab-runner.clearPastRuns": {
+					    "type": "boolean",
+					    "default": true,
+					    "description": "Sets whether or not the output from previous runs should be cleared each time a new selection is executed"
 				    }
                 }
             }
