@@ -1,7 +1,14 @@
 # Change Log
 
-### Added
+## [0.1.5] - 01-29-2018
 
+### Changed
+- Cleaned up and optimized extension
+
+
+## [0.1.4] - 01-29-2018
+
+### Added
 - Demo
 
 ### Fixed
