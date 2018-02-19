@@ -12,7 +12,8 @@ Please open an issue for any bugs you find. I hacked this together for my own pe
 
 # Demo
 ![Image](demos/demo3.gif)
-
+# Please Note
+This extension works best on mac as Matlab does not fully support running the executable from command prompt. Also, versions prior to 2017 will not work on windows at all.
 # Setup
 1. In settings, find 'matlab-runner.matlabPath' and set it to the location of the matlab executable.
 For example (mac): '/Applications/MATLAB_R2017b/bin/matlab'
