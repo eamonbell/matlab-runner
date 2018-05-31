@@ -2,7 +2,7 @@
     "name": "matlab-runner",
     "displayName": "Matlab Runner",
     "description": "Run selected MATLAB code",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "publisher": "eamonbell",
     "engines": {
         "vscode": "^1.19.0"
@@ -54,6 +54,11 @@
 					    "type": "boolean",
 					    "default": true,
 					    "description": "Sets whether or not the output from previous runs should be cleared each time a new selection is executed"
+                    },
+                    "matlab-runner.powershell": {
+					    "type": "boolean",
+					    "default": false,
+					    "description": "Sets whether or not matlab is being executed in powershell"
 				    }
                 }
             }

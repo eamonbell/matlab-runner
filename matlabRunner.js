@@ -59,6 +59,7 @@ function RunSelection() {
     }
     var tempFile = config['tempFilePath'];
     var matlab = "\"" + config['matlabPath'] + "\"";
+    var powershell = config['powershell'];
     var shouldClear = config['clearPastRuns'];
     fs.writeFile(tempFile, '', function (err) {
         if (err) {
@@ -72,6 +73,9 @@ function RunSelection() {
         stream.end();
     });
     stream.close();
+    if (powershell) {
+        matlab = "& " + matlab;
+    }
     if (term == null) {
         term = vscode.window.createTerminal('Matlab');
         term.show();
@@ -79,11 +83,17 @@ function RunSelection() {
             term.sendText(matlab + argsUsed + ' -r "run(\'' + tempFile + '\');"', true);
         }, 2000);
     } else {
-        term.sendText('clear \'' + tempFile + '\'', true);
-        if (shouldClear) {
-            term.sendText('clc', true);
+        if (!powershell) {
+            term.sendText('clear \'' + tempFile + '\'', true);
+            if (shouldClear) {
+                term.sendText('clc', true);
+            }
+            term.sendText('run \'' + tempFile + '\'', true);
         }
-        term.sendText('run \'' + tempFile + '\'', true);
+        else {
+            term.sendText('clear \'' + tempFile + '\'', true);
+            term.sendText(matlab + argsUsed + ' -r "run(\'' + tempFile + '\');"', true);
+        }
     }
 }
 
@@ -94,6 +104,7 @@ function RunFile() {
         return;
     }
     var matlab = "\"" + config['matlabPath'] + "\"";
+    var powershell = config['powershell'];
     let editor = vscode.window.activeTextEditor;
     let filePath = editor.document.uri.fsPath;
     var shouldClear = config['clearPastRuns'];
@@ -105,6 +116,9 @@ function RunFile() {
         vscode.window.showErrorMessage("Please make sure this file is saved with the \'.m\' extension");
         return;
     }
+    if (powershell) {
+        matlab = "& " + matlab;
+    }
     if (term == null) {
         term = vscode.window.createTerminal('Matlab');
         term.show();
@@ -112,9 +126,17 @@ function RunFile() {
             term.sendText(matlab + argsUsed + ' -r "run(\'' + filePath + '\');"', true);
         }, 2000);
     } else {
-        if (shouldClear) {
-            term.sendText('clc', true);
+        if (!powershell) {
+            term.sendText('clear \'' + filePath + '\'', true);
+            if (shouldClear) {
+                term.sendText('clc', true);
+            }
+            term.sendText('run \'' + filePath + '\'', true);
         }
-        term.sendText('run \'' + filePath + '\'', true);
+        else {
+            term.sendText('clear \'' + filePath + '\'', true);
+            term.sendText(matlab + argsUsed + ' -r "run(\'' + filePath + '\');"', true);
+        }
+      
     }
 }

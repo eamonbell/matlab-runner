@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.3.0] - 05-31-2018
+
+### Added
+- Added support for powershell
+
 ## [0.2.0] - 01-29-2018
 
 ### Added
